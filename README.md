@@ -5,4 +5,5 @@ This project is published only for backup purpose. This is the sixth part of the
 
 ## Used assets and fonts
 The background "starfield" is gived by the teacher of the course
+
 The asset used are Space Shooter Redux (available [here](https://www.kenney.nl/assets/space-shooter-redux)) created by Kenney : https://www.kenney.nl/. The license is available in the spaceshooter folders in "Asset Packs" (under Asset) and it's the same used by the course's teacher (who gived the links in the lecture's ressources).
