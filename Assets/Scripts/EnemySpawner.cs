@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                 Instantiate(currentWave.GetEnemyPrefab(i), 
                     currentWave.GetStartingWaypoint().position,
-                    Quaternion.identity, //Quaternion.identity cause no rotation to our object
+                    Quaternion.Euler(0, 0, 180), //rotate enemy using .Euler to face the player when spawned       //No more used: "Quaternion.identity" : cause no rotation to our object
                     transform); // to spawn enemies under "EnemySpawner" GameObject
                 yield return new WaitForSeconds(currentWave.GetRandomSpawnTime()); //coroutine to have time between Enemies spawn
                 }
