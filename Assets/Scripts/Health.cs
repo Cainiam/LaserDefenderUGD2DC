@@ -11,6 +11,15 @@ public class Health : MonoBehaviour
     [Header("Particle effect for damage")]
     [SerializeField] ParticleSystem hitEffect;
 
+    [Header("Camera shake management")]
+    [SerializeField] bool applyCameraShake;
+    CameraShake cameraShake;
+
+    void Awake()
+    {
+        cameraShake = Camera.main.GetComponent<CameraShake>();
+    }
+
     void OnTriggerEnter2D(Collider2D other) 
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
@@ -19,6 +28,7 @@ public class Health : MonoBehaviour
         {
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
+            ShakeCamera();
             damageDealer.Hit();
         }
     }
@@ -39,6 +49,15 @@ public class Health : MonoBehaviour
                                                                                     //no rotation
             ParticleSystem instance = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
+        }
+    }
+
+    //Advice for the teacher to follow for using a Camera Shake (more robust than ours) : https://www.youtube.com/watch?v=tu-Qe66AvtY
+    void ShakeCamera()
+    {
+        if (cameraShake != null && applyCameraShake)
+        {
+            cameraShake.play();
         }
     }
 }
