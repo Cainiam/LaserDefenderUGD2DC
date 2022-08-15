@@ -14,7 +14,7 @@ public class AudioPlayer : MonoBehaviour
 
     static AudioPlayer instance;
 
-    /**public AudioPlayer GetInstance() //with this way of singleton, we can take the instance for playing audioclip without needing to search it, just passing the instance of it
+    /**public AudioPlayer GetInstance() //with this way of singleton, we can take the instance for playing audioclip without needing to search it, just passing the instance of it but any script can use this instance since it's a public method
     {
         return instance;
     }*/
@@ -26,7 +26,7 @@ public class AudioPlayer : MonoBehaviour
 
     void ManageSingleton()
     {
-        // Other way to make a singleton ("more rare"), we don't need a static and a Getter for the instance
+        // Other way to make a singleton ("more rare"), we need a static and a Getter for the instance
         int instanceCount = FindObjectsOfType(GetType()).Length;
         if(instanceCount > 1) //with the other way : if(instance != null)
         {
@@ -35,7 +35,7 @@ public class AudioPlayer : MonoBehaviour
         }
         else
         {
-            //instance = this; //other way
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
