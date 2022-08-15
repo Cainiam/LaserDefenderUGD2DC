@@ -8,4 +8,4 @@ Some assets as the background are gived by the teacher of the course.
 
 The asset pack used is Space Shooter Redux (available [here](https://www.kenney.nl/assets/space-shooter-redux)) created by Kenney : https://www.kenney.nl/. The license is available in the spaceshooter folders in "Asset Packs" (under Asset) and it's the same used by the course's teacher (who gived the links in the lecture's ressources).
 The audio pack used is Sci-Fi Sounds (available [here](https://www.kenney.nl/assets/sci-fi-sounds)) created by Kenney : https://www.kenney.nl/. The license is available in the Sci-fi Sounds folders as the PNG Asset folder.
-
+The Background Music used is part of a free Action Chiptune music pack by Juhani Junkala (available  [here](https://opengameart.org/content/5-chiptunes-action)) . Informations are available under the 5 Action Chiptunes By Juhani Junkala folder. 
