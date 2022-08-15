@@ -953,7 +953,15 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 9c925e8348ef16542964ee2a3dc8e8ba, type: 2}
   - {fileID: 11400000, guid: 99526ed73d6d4584cac28ad41da66b77, type: 2}
-  timeBetweenWaves: 2
+  - {fileID: 11400000, guid: d62f9a16912d53a41a6d6e9e1d53d002, type: 2}
+  - {fileID: 11400000, guid: 941789ed11af9714cb81c21c8c53a9e4, type: 2}
+  - {fileID: 11400000, guid: 7a0bf2e7ef88b494db250f37ae554b59, type: 2}
+  - {fileID: 11400000, guid: 996246aec2d80df438e79d155a357ffc, type: 2}
+  - {fileID: 11400000, guid: e3e0eee72d4a3b245af32afb2667aa5e, type: 2}
+  - {fileID: 11400000, guid: 22bbcf12cc6a8c3489d2b4af4211b378, type: 2}
+  - {fileID: 11400000, guid: 581e118c8d190ed418d881b0b1511142, type: 2}
+  - {fileID: 11400000, guid: 82b7aafe6bb5e394081337d2daf96a07, type: 2}
+  timeBetweenWaves: 1.5
   isLooping: 1
 --- !u!4 &1827993348
 Transform:
@@ -1059,6 +1067,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5222515673211096521, guid: 8e4f4f696268b024892d3862a2e92525, type: 3}
+    - target: {fileID: 16636145026750965, guid: 89f7e7316e1bc7541b8fe7ab07a4df9b, type: 3}
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5163845992074005331, guid: 89f7e7316e1bc7541b8fe7ab07a4df9b, type: 3}
       propertyPath: m_RootOrder
       value: 1

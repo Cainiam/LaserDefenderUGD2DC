@@ -12,3 +12,9 @@ PS: Some assets (as the background or the explosions parts) are gived by the tea
 * The Background Music used is part of a free Action Chiptune music pack by Juhani Junkala (available  [here](https://opengameart.org/content/5-chiptunes-action)) . Informations are available under the 5 Action Chiptunes By Juhani Junkala folder and it's the same used by the course's teacher (who gived the links in the lecture's ressources).
 * Font used for the Score Text on the UI on the "Game" scene and for subtitle and button on the "Main Menu" and "Game Over" scenes is "Retro Stereo Wide" created by Gus Thessalos (part of the pack Retro Mono/Stereo Wide) who is available on [dafont.com](https://www.dafont.com/fr/retro-stereo-wide.font?l[]=10&l[]=1) as a 100% free font.
 * Font used for title on the "Main Menu" and "Game Over" scenes is "Android" created by Isaac K who is available on [dafont.com](https://www.dafont.com/fr/android.font?l[]=10&l[]=1&text=Laser+Defender) as a 100% free font.
+
+## Where to test ?
+
+You can try the game here : [Try It !](https://sharemygame.com/@Cainiam/laser-defender-by-cainiam).
+
+Be aware that is just a 1st version of the game and I don't currently have the time to expend it more than it's actual version.
