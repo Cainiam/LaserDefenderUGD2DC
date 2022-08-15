@@ -67,6 +67,7 @@ public class Shooter : MonoBehaviour
             Destroy(instance, projectileLifetime);
             float TimeToNextProjectile = GetTimeToNextProjectile();
             audioPlayer.PlayShootingClip();
+            //audioPlayer.GetInstance().PlayShootingClip(); we prefer to avoid this type of access since we can loose control over it
             yield return new WaitForSeconds(TimeToNextProjectile);
         }
     }

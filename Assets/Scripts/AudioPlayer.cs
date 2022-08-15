@@ -12,6 +12,34 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip damageTakenClip;
     [SerializeField] [Range(0f, 1f)] float damageTakenVolume = 1f;
 
+    static AudioPlayer instance;
+
+    /**public AudioPlayer GetInstance() //with this way of singleton, we can take the instance for playing audioclip without needing to search it, just passing the instance of it
+    {
+        return instance;
+    }*/
+
+    void Awake()
+    {
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        // Other way to make a singleton ("more rare"), we don't need a static and a Getter for the instance
+        int instanceCount = FindObjectsOfType(GetType()).Length;
+        if(instanceCount > 1) //with the other way : if(instance != null)
+        {
+            gameObject.SetActive(false); //Better for stopping anything else to try to grab this gameObject before being destroyed
+            Destroy(gameObject);
+        }
+        else
+        {
+            //instance = this; //other way
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     public void PlayShootingClip()
     {
         PlayClip(shootingClip, shootingVolume);
