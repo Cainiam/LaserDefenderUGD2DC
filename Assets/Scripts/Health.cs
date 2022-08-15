@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [Header("Health Management")]
+    [Header("Health and Score management")]
+    [SerializeField] bool isPlayer;
     [SerializeField] int health = 50;
+    [SerializeField] int score = 50;
 
     //Teacher advise: created a dedicated script for particle effet if there are several particle effects
     [Header("Particle effect for damage")]
@@ -16,11 +18,18 @@ public class Health : MonoBehaviour
     CameraShake cameraShake;
 
     AudioPlayer audioPlayer;
+    ScoreKeeper scoreKeeper;
 
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     void OnTriggerEnter2D(Collider2D other) 
@@ -42,8 +51,17 @@ public class Health : MonoBehaviour
         health -= damage;
         if(health <= 0 )
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if(!isPlayer)
+        {
+            scoreKeeper.ModifyScore(score);
+        }
+        Destroy(gameObject);
     }
 
     void PlayHitEffect()
